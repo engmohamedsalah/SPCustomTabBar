@@ -169,7 +169,10 @@
 		[thisButton addTarget:self action:@selector(tabTapped:) forControlEvents:UIControlEventTouchUpInside];
         [buttonsArray addObject:thisButton];
 	}
-	
+    for (UITabBarItem* item in self.tabBar.items) {
+        [item setEnabled:NO];
+    }
+
 }
 
 - (void)tabTapped:(id)sender
